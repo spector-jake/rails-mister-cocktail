@@ -1,0 +1,8 @@
+<h1>Mister Cocktail</h1>
+
+<% @cocktails.each do |cocktail| %>
+  <h4><%= link_to cocktail.name, cocktail_path(cocktail)%></h4>
+  <br>
+<% end %>
+
+<%= link_to 'Add Cocktail', new_cocktail_path, class: " btn btn-outline-primary" %>
