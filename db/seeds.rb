@@ -7,9 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'open-uri'
 require 'json'
-
-Ingredient.destroy_all
+Dose.destroy_all
 Cocktail.destroy_all
+Ingredient.destroy_all
+
 
 url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
 ingredients_serialized = open(url).read
