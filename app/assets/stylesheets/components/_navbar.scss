@@ -15,4 +15,11 @@
     display: flex;
     -webkit-box-align: center;
     align-items: center;
+    a {
+      color: black;
+    }
+    a:hover {
+      text-decoration: none;
+    }
 }
+
