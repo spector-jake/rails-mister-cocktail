@@ -1,7 +1,9 @@
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+  grid-gap: 32px;
+  width: 100%;
+  justify-content: center;
 }
 
 // Smallest device
@@ -28,14 +30,14 @@
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
   .cards {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   .cards {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
@@ -43,6 +45,7 @@
   background-size: cover;
   background-position: center;
   height: 180px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
