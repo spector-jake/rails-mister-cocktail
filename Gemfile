@@ -65,3 +65,5 @@ gem 'simple_form'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.9.1'
 gem 'carrierwave', '~> 1.2'
+gem "select2-rails"
+gem 'select2_simple_form', github: 'lndl/select2_simple_form', tag: '0.7.3'

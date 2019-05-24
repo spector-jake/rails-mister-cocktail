@@ -1,12 +1,28 @@
 <h1><%= @cocktail.name %></h1>
 
-<h2>Ingredients</h2>
-<ul>
-  <% @cocktail.doses.each do |dose| %>
-    <li><%= dose.ingredient.name %> - <%= dose.description%> <%= link_to dose_path(dose),
-        method: :delete,
-        data: { confirm: "Are you sure?" } do %>
-      <i class="fas fa-trash"></i>
-    <% end %></li>
-  <% end %>
-</ul>
+<div class="d-flex">
+  <div class="container">
+
+    <h4>Ingredients</h4>
+    <% @cocktail.doses.each do |dose| %>
+      <div class="row">
+        <div class="col-sm">
+          <%= dose.ingredient.name %>
+        </div>
+        <div class="col-sm">
+          <%= dose.description%> <%= link_to dose_path(dose),
+            method: :delete,
+            data: { confirm: "Are you sure?" } do %>
+          <i class="fas fa-trash"></i>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+
+  <div class="container">
+    <%= render '/doses/form', cocktail: @cocktail %>
+  </div>
+</div>
+

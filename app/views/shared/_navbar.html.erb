@@ -29,24 +29,24 @@
         </button>
       </div>
       <div class="modal-body mx-3">
-        <%= simple_form_for(@cocktail) do |f| %>
-          <% if @cocktail.errors.any? %>
+        <%= simple_form_for(@new_cocktail) do |f| %>
+          <% if @new_cocktail.errors.any? %>
             <div class="errors-container">
               <ul>
-                <% @cocktail.errors.full_messages.each do |message| %>
+                <% @new_cocktail.errors.full_messages.each do |message| %>
                   <li><%= message %></li>
                 <% end %>
               </ul>
             </div>
           <% end %>
           <div class="form-group">
-            <%= f.label :name %> <br>
-            <%= f.text_field :name %> <br>
+            <%= f.label :name, class: "input-control" %> <br>
+            <%= f.text_field :name, class: "form-control" %> <br>
 
-            <%= f.input :photo %>
-            <%= f.input :photo_cache, as: :hidden %>
+            <%= f.input :photo, class: "input-control" %>
+            <%= f.input :photo_cache, as: :hidden, class: "form-control" %>
 
-            <%= f.submit "Add a cocktail", class: "btn btn-primary" %>
+            <%= f.submit "Create Cocktail", class: "btn btn-primary" %>
           </div>
         <% end %>
 
